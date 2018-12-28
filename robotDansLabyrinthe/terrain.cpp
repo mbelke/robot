@@ -3,7 +3,7 @@
 const int nombreDeLignes = 20;
 const int nombreDeColonnes = 20;
 char matrice[nombreDeLignes][nombreDeColonnes];
-//robot monRobot;
+robot monRobot;
 const int TIMER_MILLIS=300;
 
 int arriveeColonne;
@@ -35,7 +35,7 @@ void terrain::affichageDuTerrain()
 	glClear(GL_COLOR_BUFFER_BIT);
 	glMatrixMode(GL_MODELVIEW);
 	dessinerLabyrinthe();
-	//monRobot.dessinerRobot();
+	monRobot.dessinerRobot();
 	glutSwapBuffers();
 }
 
@@ -72,8 +72,8 @@ void terrain::departEtArrivee()
 			switch(matrice[i][j])
 			{
 			case 'd':
-				//monRobot.setPositionLigne(k);
-				//monRobot.setPositionColonne(j);
+				monRobot.setPositionLigne(k);
+				monRobot.setPositionColonne(j);
 				break;
 			case 'a':
 				arriveeColonne=j;
@@ -129,13 +129,13 @@ void terrain::dessinerLabyrinthe()
 //Test de la victoire par l'arivée du robot au point d'arrivée
 void terrain::victoire()
 {
-	/*if((monRobot.positionColonne()==arriveeColonne) && (monRobot.positionLigne()==arriveeLigne))
+	if((monRobot.positionColonne()==arriveeColonne) && (monRobot.positionLigne()==arriveeLigne))
 	{
 		cout << "Bravo, vous avez gagné!" << endl;
 		affichageDuTerrain();
 		system("pause");
 		exit(1);
-	}*/
+	}
 }
 
 //Déplacer le robot selon la main droite
@@ -146,10 +146,10 @@ void terrain::deplacerRobotSelonLaMainDroite()
 	switch(hasard)
 	{
 	case 0:
-		//monRobot.tournerADroite();
+		monRobot.tournerADroite();
 		break;
 	case 1:
-		//monRobot.avancer();
+		monRobot.avancer();
 		break;
 	}
 	victoire();
