@@ -4,6 +4,7 @@
 #include <iostream>
 #include <fstream>
 #include "GL\glut.h"
+//#include "robot.h"
 
 using std::fstream;
 using std::cout;
