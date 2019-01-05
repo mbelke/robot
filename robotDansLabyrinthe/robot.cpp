@@ -82,3 +82,14 @@ void robot::tournerAGauche()
 }
 
 
+void robot::pledgeAlgorithme()
+{
+	
+	
+	
+	
+	
+	
+}
+
+

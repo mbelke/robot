@@ -24,5 +24,6 @@ public:
 	void avancer();
 	void tournerAGauche();
 	void tournerADroite();
+	void pledgeAlgorithme();
 };
 #endif //ROBOT_H
