@@ -9,7 +9,6 @@ void main()
 	t.chargerLabyrinthe("murs.txt");
 	glutDisplayFunc(terrain::affichageDuTerrain);
 	t.labyrintheTimer(500);
-	//test
 	glutMainLoop();
 }
 
